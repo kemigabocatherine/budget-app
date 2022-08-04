@@ -1,0 +1,20 @@
+<%= form_with model: @group, class: "form" do |form| %>
+  <h2 class="form_title">Add a category</h2>
+  <section class="form-section">
+    <p class="input-text"><%= form.label :name %>:</p>
+    <%= form.text_field :name,
+    class: "text_input",
+    placeholder: "Write your category here" %>
+  </section>
+
+  <section class="form-section">
+    <p class="input-text"><%= form.label :icon %>:</p>
+    <%= form.text_area :icon,
+    class: "text_input",
+    placeholder: "Select an icon..." %>
+  </section>
+
+  <section class="form-section">
+    <%= form.submit "Save", class: "submit_button" %>
+  </section>
+<% end %>

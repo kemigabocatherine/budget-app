@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root to: 'home#index'
+  get '/user' => "group#index", :as => :user_root
   resources :users, only: %i[index show create new]
   resources :groups
   resources :purchases
