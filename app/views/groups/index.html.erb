@@ -1,0 +1,16 @@
+<div>
+  <h1>CATEGORIES</h1>
+  <ul>
+    <% @groups.each do |group| %>
+        <div class="group_container">
+          <%# <%=link_to group_path(@user, group) do %>
+            <%= group.icon%>
+            <%= group.name%>
+            <%# <%= group.amount%>
+          <%# <% end %>
+        </div>
+    <% end %>
+  </ul>
+  <%= link_to 'Sign out', '/users/sign_out', :method => :delete %>
+  <%= link_to 'Add new category', new_group_path%>
+</div>
