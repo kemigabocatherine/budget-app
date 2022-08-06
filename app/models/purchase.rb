@@ -1,6 +1,6 @@
 class Purchase < ApplicationRecord
   belongs_to :user
-  has_many :group_purchase
+  has_many :group_purchase, dependent: :destroy
   has_many :groups, through: :group_purchase
 
   validates :name, presence: true

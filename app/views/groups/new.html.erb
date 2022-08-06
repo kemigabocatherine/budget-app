@@ -1,4 +1,5 @@
 <%= form_with model: @group, class: "form" do |form| %>
+  <%= link_to '<', groups_path, class: 'link'%>
   <h2 class="form_title">Add a category</h2>
   <section class="form-section">
     <p class="input-text"><%= form.label :name %>:</p>
@@ -8,10 +9,8 @@
   </section>
 
   <section class="form-section">
-    <p class="input-text"><%= form.label :icon %>:</p>
-    <%= form.text_area :icon,
-    class: "text_input",
-    placeholder: "Select an icon..." %>
+    <p class="input-text"><%= form.label :icon, 'Select icon' %>:</p>
+    <%= form.select :icon, ['logos:netflix-icon', 'maki:gaming', 'emojione:hospital', 'ic:outline-menu-book', 'ic:outline-facebook', 'ic:round-laptop-chromebook', 'ic:round-library-music', 'ic:baseline-queue-music', 'emojione:shopping-bags', 'emojione-v1:shopping-bags', 'noto:shopping-cart', 'fa6-solid:gifts', 'ion:restaurant-sharp', 'emojione:high-speed-train', 'raphael:plane'], value: @group.icon, required: true %>
   </section>
 
   <section class="form-section">

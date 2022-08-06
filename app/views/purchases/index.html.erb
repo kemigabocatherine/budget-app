@@ -1,5 +1,9 @@
+<%= link_to '<', groups_path, class: 'link'%>
 <h1><%= @group.name %> Transactions</h1>
-<% @purchases.each do |purchase| %>
+<div class="total_amount">
+  <p>Total: $<%= @total %></p>
+</div>
+<% @purchases.order(created_at: :desc).each do |purchase| %>
   <div class="group_card">
     <p><%= purchase.name %></p>
     <p>$ <%= purchase.amount %></p>

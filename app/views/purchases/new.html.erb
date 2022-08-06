@@ -1,4 +1,4 @@
-<%# <a href="/groups/params[:group_id]/purchases"><</a> %>
+<%= link_to '<', group_purchases_path(params[:group_id], @group), class: 'link'%>
 <h2 class="form_title">Add a transaction</h2>
 <%= form_with model: @purchase, url: "/groups/#{params[:group_id]}/purchases" , method: :post, class: "form" do |form| %>
   <section class="form-section">
