@@ -1,6 +1,6 @@
 # Budget App
 
-- The Budget App is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+- This is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 # Live demo
 Not yet
@@ -23,16 +23,10 @@ Set up database direct them to the config/database.yml file
 bundle install
 ```
 ```
-'npm install' or 'yarn install'
-```
-```
 rails db:create
 ```
 ```
 rails db:migrate
-```
-```
-rails 'db:seed' if there is data in the seed
 ```
 ```
 'rails s' to start the server locally
