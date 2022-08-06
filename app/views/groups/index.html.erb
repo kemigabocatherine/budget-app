@@ -3,12 +3,14 @@
   <ul>
     <% @groups.each do |group| %>
         <div class="group_container">
-          <%# <%=link_to group_path(@user, group) do %>
+          <%=link_to group_purchases_path(group_id: group.id) do %>
             <%= group.icon%>
             <%= group.name%>
             <%# <%= group.amount%>
-          <%# <% end %>
+          <% end %>
         </div>
+        <br>
+        <br>
     <% end %>
   </ul>
   <%= link_to 'Sign out', '/users/sign_out', :method => :delete %>
