@@ -1,12 +1,18 @@
-<%= link_to '<', groups_path, class: 'link'%>
-<h1><%= @group.name %> Transactions</h1>
+  <nav class="nav">
+    <%= link_to groups_path, class: 'link' do %>
+      <span class="iconify" data-icon="eva:arrow-ios-back-fill" data-width="50" data-height="40" style="color: white; margin-left: -7rem;"></span>
+    <%end%>
+    <h1 class="heading"><%= @group.name %> Transactions</h1>
+  </nav>
 <div class="total_amount">
-  <p>Total: $<%= @total %></p>
+  <p class="name-tot">TOTAL AMOUNT:</p> <p class="amount">$<%= @total %></p>
 </div>
 <% @purchases.order(created_at: :desc).each do |purchase| %>
-  <div class="group_card">
-    <p><%= purchase.name %></p>
-    <p>$ <%= purchase.amount %></p>
+  <div class="purchase_container">
+    <p class="name-tot"><%= purchase.name %></p>
+    <p class="amount">$ <%= purchase.amount %></p>
   </div>  
 <% end %>
-<%= button_to 'New transaction', new_group_purchase_path, method: :get%>
+<div class="new-link3">
+  <%= link_to 'New transaction', new_group_purchase_path, class: 'purchase-link' %>
+</div>

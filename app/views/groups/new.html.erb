@@ -1,19 +1,23 @@
+<nav class="nav">
+  <%= link_to groups_path, class: 'link' do %>
+    <span class="iconify" data-icon="eva:arrow-ios-back-fill" data-width="50" data-height="40" style="color: white; margin-left: -12rem;"></span>
+  <%end%>
+  <h2 class="heading">Add a category</h2>
+</nav>
 <%= form_with model: @group, class: "form" do |form| %>
-  <%= link_to '<', groups_path, class: 'link'%>
-  <h2 class="form_title">Add a category</h2>
   <section class="form-section">
-    <p class="input-text"><%= form.label :name %>:</p>
     <%= form.text_field :name,
     class: "text_input",
-    placeholder: "Write your category here" %>
+    placeholder: "Name" %>
   </section>
 
   <section class="form-section">
-    <p class="input-text"><%= form.label :icon, 'Select icon' %>:</p>
-    <%= form.select :icon, ['logos:netflix-icon', 'maki:gaming', 'emojione:hospital', 'ic:outline-menu-book', 'ic:outline-facebook', 'ic:round-laptop-chromebook', 'ic:round-library-music', 'ic:baseline-queue-music', 'emojione:shopping-bags', 'emojione-v1:shopping-bags', 'noto:shopping-cart', 'fa6-solid:gifts', 'ion:restaurant-sharp', 'emojione:high-speed-train', 'raphael:plane'], value: @group.icon, required: true %>
+    <%= form.select :icon, ['Select icon', 'logos:netflix-icon', 'maki:gaming', 'emojione:hospital', 'ic:outline-menu-book', 'ic:outline-facebook', 'ic:round-laptop-chromebook', 'ic:round-library-music', 'ic:baseline-queue-music', 'emojione:shopping-bags', 'emojione-v1:shopping-bags', 'noto:shopping-cart', 'fa6-solid:gifts', 'ion:restaurant-sharp', 'emojione:high-speed-train', 'raphael:plane'], value: @group.icon, required: true %>
   </section>
 
   <section class="form-section">
-    <%= form.submit "Save", class: "submit_button" %>
+    <div class="submit">
+      <%= form.submit "SAVE", class: "submit_button" %>
+    </div>
   </section>
 <% end %>
