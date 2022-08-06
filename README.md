@@ -47,13 +47,13 @@ rspec
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Feel free to leave any contributions, issues, and feature requests. They are highly appreciated!
 
 Feel free to check the [issues page](https://github.com/kemigabocatherine/budget-app/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a 👍 or 🌟 if you like this project!
 
 ## Acknowledgments
 
