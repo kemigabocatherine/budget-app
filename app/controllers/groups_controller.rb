@@ -3,8 +3,6 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.where(user_id: current_user.id)
-    # @purchase = Group_purchase.all
-    # @total = Group.purchase.total
   end
 
   def show

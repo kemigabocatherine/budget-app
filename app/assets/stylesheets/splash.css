@@ -1,8 +1,17 @@
+body {
+  width: 800px;
+}
+
 .home-body {
   background-color: black;
 }
 
 .home-image {
-  padding-top: 6rem;
-  padding-left: 24rem;
+  /* padding-top: 6rem;
+  padding-left: 20%; */
+  /* height: 50%; */
+  position: fixed;
+  left: 20%;
+  right: 0;
+  top: 5rem;
 }

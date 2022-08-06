@@ -1,26 +1,30 @@
-<%= link_to '<', group_purchases_path(params[:group_id], @group), class: 'link'%>
-<h2 class="form_title">Add a transaction</h2>
+<nav class="nav">
+  <%= link_to group_purchases_path(params[:group_id], @group), class: 'link' do %>
+    <span class="iconify" data-icon="eva:arrow-ios-back-fill" data-width="50" data-height="40" style="color: white; margin-left: -12rem;"></span>
+  <%end%>
+  <h2 class="heading">Add a transaction</h2>
+</nav>
 <%= form_with model: @purchase, url: "/groups/#{params[:group_id]}/purchases" , method: :post, class: "form" do |form| %>
   <section class="form-section">
-    <p class="input-text"><%= form.label :name %>:</p>
     <%= form.text_field :name,
     class: "text_input",
-    placeholder: "Write your transaction here" %>
+    placeholder: "Transaction Name" %>
   </section>
 
   <section class="form-section">
-    <p class="input-text"><%= form.label :amount %>:</p>
     <%= form.number_field :amount,
     class: "number_field",
     placeholder: "Add the amount..." %>
   </section>
 
-  <div class="form-row">
+  <div class="select">
     <% @groups = Group.all %>
      <%= form.select(:group_id, @groups.map { |group| [group.name, group_id: group.id] }, {:class => "group-select"}) %>
   </div>
 
   <section class="form-section">
-    <%= form.submit "Save", class: "submit_button" %>
+    <div class="submit1">
+      <%= form.submit "Save", class: "submit_button" %>
+    </div>
   </section>
 <% end %>
