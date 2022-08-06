@@ -1,0 +1,20 @@
+<%= form_with model: @group_purchase, url: "/groups/#{params[:group_id]}/purchases" , method: :post, class: "form" do |form| %>
+  <h2 class="form_title">Add a transaction</h2>
+  <section class="form-section">
+    <p class="input-text"><%= form.label :name %>:</p>
+    <%= form.text_field :name,
+    class: "text_input",
+    placeholder: "Write your transaction here" %>
+  </section>
+
+  <section class="form-section">
+    <p class="input-text"><%= form.label :amount %>:</p>
+    <%= form.number_field :amount,
+    class: "number_field",
+    placeholder: "Add the amount..." %>
+  </section>
+
+  <section class="form-section">
+    <%= form.submit "Save", class: "submit_button" %>
+  </section>
+<% end %>

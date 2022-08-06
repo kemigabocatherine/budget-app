@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   root to: 'home#index'
   get '/user' => "group#index", :as => :user_root
   resources :users, only: %i[index show create new]
-  resources :groups
-  resources :purchases
+  resources :groups, only: [:index, :create, :new] do
+    resources :purchases, only: [:index, :create, :new]
+  end
   resources :group_purchases
 end
