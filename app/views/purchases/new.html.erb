@@ -1,5 +1,6 @@
-<%= form_with model: @group_purchase, url: "/groups/#{params[:group_id]}/purchases" , method: :post, class: "form" do |form| %>
-  <h2 class="form_title">Add a transaction</h2>
+<%# <a href="/groups/params[:group_id]/purchases"><</a> %>
+<h2 class="form_title">Add a transaction</h2>
+<%= form_with model: @purchase, url: "/groups/#{params[:group_id]}/purchases" , method: :post, class: "form" do |form| %>
   <section class="form-section">
     <p class="input-text"><%= form.label :name %>:</p>
     <%= form.text_field :name,

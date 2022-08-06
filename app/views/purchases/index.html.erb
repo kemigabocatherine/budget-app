@@ -1,8 +1,8 @@
-<h1>Transactions</h1>
+<h1><%= @group.name %> Transactions</h1>
 <% @purchases.each do |purchase| %>
-        <div class="group_container">
-          <%= purchase.name%>
-           <%= purchase.amount%>
-        </div>
-    <% end %>
-<%= link_to 'New transaction', new_group_purchase_path%>
+  <div class="group_card">
+    <p><%= purchase.name %></p>
+    <p>$ <%= purchase.amount %></p>
+  </div>  
+<% end %>
+<%= button_to 'New transaction', new_group_purchase_path, method: :get%>
