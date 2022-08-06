@@ -4,9 +4,8 @@
     <% @groups.each do |group| %>
         <div class="group_container">
           <%=link_to group_purchases_path(group_id: group.id) do %>
-            <%= group.icon%>
+            <span class="iconify" data-icon="<%= group.icon %>" data-width="70" data-height="55"></span>
             <%= group.name%>
-            <%# <%= group.amount%>
           <% end %>
         </div>
         <br>

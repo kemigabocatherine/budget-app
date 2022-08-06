@@ -4,6 +4,10 @@ class PurchasesController < ApplicationController
   def index
     @group = Group.find(params[:group_id])
     @purchases = @group.purchases.all
+    @total = 0
+    @purchases.each do |purchase|
+      @total += purchase.amount
+    end
   end
 
   def new
@@ -21,6 +25,19 @@ class PurchasesController < ApplicationController
     else
       render :new
     end
+  end
+
+  # def total_transactions
+  #   @group = Group.find(params[:group_id])
+  #   # @total_transactions = 0
+  #   # @total_transactions = (@group.purchases.amount).sum
+  #     @total_transactions = 0
+  #     @total_transactions += purchase.amount
+  # end
+
+  def recent_purchases
+    @purchases = @group.purchases.all
+    @purchases.order(created_at: :desc)
   end
 
   def purchase_params

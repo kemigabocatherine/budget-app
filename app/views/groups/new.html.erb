@@ -1,4 +1,5 @@
 <%= form_with model: @group, class: "form" do |form| %>
+  <%= link_to '<', groups_path, class: 'link'%>
   <h2 class="form_title">Add a category</h2>
   <section class="form-section">
     <p class="input-text"><%= form.label :name %>:</p>
@@ -8,10 +9,11 @@
   </section>
 
   <section class="form-section">
-    <p class="input-text"><%= form.label :icon %>:</p>
-    <%= form.text_area :icon,
+    <p class="input-text"><%= form.label :icon, 'Select icon' %>:</p>
+    <%# <%= form.select :icon,
     class: "text_input",
     placeholder: "Select an icon..." %>
+    <%= form.select :icon, ['logos:netflix-icon', 'maki:gaming'], value: @group.icon, required: true %>
   </section>
 
   <section class="form-section">
