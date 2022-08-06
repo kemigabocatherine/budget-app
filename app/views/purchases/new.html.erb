@@ -15,6 +15,11 @@
     placeholder: "Add the amount..." %>
   </section>
 
+  <div class="form-row">
+    <% @groups = Group.all %>
+     <%= form.select(:group_id, @groups.map { |group| [group.name, group_id: group.id] }, {:class => "group-select"}) %>
+  </div>
+
   <section class="form-section">
     <%= form.submit "Save", class: "submit_button" %>
   </section>
