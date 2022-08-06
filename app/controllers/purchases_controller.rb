@@ -27,20 +27,12 @@ class PurchasesController < ApplicationController
     end
   end
 
-  # def total_transactions
-  #   @group = Group.find(params[:group_id])
-  #   # @total_transactions = 0
-  #   # @total_transactions = (@group.purchases.amount).sum
-  #     @total_transactions = 0
-  #     @total_transactions += purchase.amount
-  # end
-
   def recent_purchases
     @purchases = @group.purchases.all
     @purchases.order(created_at: :desc)
   end
 
   def purchase_params
-    params.require(:purchase).permit(:name, :amount, :user_id, :group_id)
+    params.require(:purchase).permit(:name, :amount, :user_id, :group)
   end
 end
