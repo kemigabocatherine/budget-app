@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag "splash.css" %>
+  </head>
+  <body class="home-body">
+    <nav class="log">
+      <% if current_user %>
+        <%=link_to "Sign Out", destroy_user_session_path, 'method': :delete, class: "submit_button1"%>
+      <% else %>
+        <%=link_to "Sign Up", new_user_registration_path, class: "submit_button2" %>
+        <br>
+        <%=link_to "Sign In", new_user_session_path, class: "submit_button3" %>
+      <%end%>
+    </nav>
+    <%= image_tag ("Screenshot from 2022-08-03 02-49-04.png"), class: "home-image" %>
+  </body>
+</html>

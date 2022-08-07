@@ -1,0 +1,27 @@
+<div>
+  <nav class="nav">
+    <div class="menu">
+      <span class="iconify" data-icon="charm:menu-hamburger" data-width="40" data-height="30" style="color: white; margin-left: -9rem;"></span>
+    </div>
+    <div >
+      <h1 class="heading">CATEGORIES</h1>
+    </div>
+  </nav>
+  <div class="groups">
+    <% @groups.each do |group| %>
+          <%=link_to group_purchases_path(group_id: group.id), class: 'group-link' do %>
+            <div class="group_container">
+              <div><span class="iconify" data-icon="<%= group.icon %>" data-width="80" data-height="65"></span></div>
+              <div class="name"><%= group.name%></div>
+              <div class="total"><p>$0</p></div>
+            </div>
+          <% end %>
+        <br>
+        <br>
+    <% end %>
+  </div>
+  <div class="add">
+    <%= link_to 'NEW CATEGORY', new_group_path, class: 'new-link'%><br>
+    <%= link_to 'Sign out', '/users/sign_out', :method => :delete, class: 'new-link2' %>
+  </div>
+</div>

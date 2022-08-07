@@ -1,0 +1,275 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url('https://fonts.googleapis.com/css?family=proxima-nova:thin,extra-light,light,bold,100,200,300,400,500,600,700,800');
+
+/* $main: #3778c2;
+$background: #f1f3f2;
+$second: #5fb523;
+$text: #434b54;
+
+$proxima-nova: 'proxima-nova', sans-serif; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'proxima-nova', sans-serif;
+  color: #434b54;
+  background: #f1f3f2;
+}
+
+.nav {
+  background: #3778c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+.heading {
+  font-weight: 200;
+  font-size: 25px;
+  color: #fff;
+}
+
+.group_container {
+  background-color: #fff;
+  border: 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: -20px;
+  height: 95px;
+}
+
+.groups {
+  display: block;
+  margin-top: 40px;
+}
+
+.group-link {
+  text-decoration: none;
+}
+
+.name {
+  font-weight: 50;
+  font-size: 17px;
+  color: #848790;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.total {
+  font-weight: 300;
+  font-size: 19px;
+  color: #383e45;
+}
+
+.add {
+  background-color: #5fb523;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 70px;
+  height: 150%;
+}
+
+.new-link,
+.new-link2 {
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.new-link {
+  margin: 0.5rem 1rem 0 1rem;
+}
+
+.new-link2 {
+  margin: -0.5rem 1rem 0.5rem 1rem;
+}
+
+/* GROUP FORM */
+
+.text_input,
+select,
+.number_field {
+  padding: 1rem;
+  width: 100%;
+  font-size: 15px;
+  border: 0.2px solid #bbbfca;
+  background: #fff;
+  margin-top: 1rem;
+}
+
+select,
+.select,
+.number_field {
+  margin-top: 0;
+}
+
+/* .number_field {
+  width: 100%;
+} */
+
+.submit1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #5fb523;
+  margin-top: 17rem;
+  margin-bottom: 0;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #5fb523;
+  margin-top: 20rem;
+  margin-bottom: 0;
+}
+
+.submit_button {
+  background-color: #5fb523;
+  padding: 1rem;
+  font-size: 15px;
+  border: 0.2px solid #fff;
+  color: #fff;
+  border-radius: 4px;
+  width: 90%;
+  margin: 1rem 0;
+}
+
+/* PURCHASES */
+.purchase_container {
+  background-color: #fff;
+  border: 1px solid #eff2fa;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  height: 95px;
+}
+
+.total_amount {
+  background-color: #fff;
+  border: 1px solid #eff2fa;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  height: 50px;
+}
+
+.name-tot {
+  font-weight: 50;
+  font-size: 17px;
+  color: #383e45;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.amount {
+  padding-top: 1rem;
+  font-weight: 300;
+  font-size: 19px;
+  color: #383e45;
+}
+
+.new-link3 {
+  background-color: #5fb523;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 70px;
+  height: 150%;
+}
+
+.purchase-link {
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 100;
+  font-size: 17px;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+/* HOME */
+
+.log {
+  display: flex;
+  justify-content: space-around;
+}
+
+.submit_button1,
+.submit_button2,
+.submit_button3 {
+  background-color: #09213d;
+  font-size: 15px;
+  border: 0.2px solid;
+  color: #fff;
+  border-radius: 2px;
+  width: 20%;
+  text-decoration: none;
+  text-align: center;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.3rem;
+}
+
+.submit2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #5fb523;
+  margin-top: 8rem;
+  margin-bottom: 0;
+}
+
+.text_input1,
+.text_input2 {
+  padding: 1rem;
+  width: 100%;
+  font-size: 15px;
+  border: 0.1px solid #eaeef8;
+  background: #fff;
+  margin-top: 0;
+}
+
+.text_input2 {
+  margin-top: 2rem;
+}
