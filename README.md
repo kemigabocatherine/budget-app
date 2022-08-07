@@ -5,7 +5,7 @@
 ## Live demo
 Not yet
 
-##Loom video
+## Loom video
 [LOOM VIDEO](https://www.loom.com/share/c4337d11abdb423096e8b8352454267e)
 
 ## Getting Started
