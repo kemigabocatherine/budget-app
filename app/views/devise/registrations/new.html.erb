@@ -1,4 +1,4 @@
-<nav class="nav"><h2 class="heading">Sign up</h2></nav>
+<nav class="nav"><h2 class="heading">REGISTER</h2></nav>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -6,13 +6,14 @@
   <div class="field">
     <%= f.text_field :name,
     class: "text_input2",
-    placeholder: "Name"  %>
+    placeholder: "Name",
+    autofocus: true  %>
   </div>
 
   <div class="field">
     <%= f.email_field :email, 
     class: "text_input1",
-    placeholder: "Email" , required: true, autofocus: true, autocomplete: "email" %>
+    placeholder: "Email" , required: true,  autocomplete: "email" %>
   </div>
 
   <div class="field">

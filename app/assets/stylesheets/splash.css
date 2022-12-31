@@ -1,14 +1,16 @@
-body {
-  width: 800px;
-}
+/* body {
+  width: 100%;
+} */
 
 .home-body {
   background-color: black;
+  width: 100%;
 }
 
 .home-image {
-  position: fixed;
-  left: 20%;
-  right: 0;
-  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
