@@ -49,6 +49,13 @@ body {
   color: #fff;
 }
 
+.signup {
+  display: flex;
+  flex-direction: column;
+  margin: 4% 10% 0 10% ;
+  
+}
+
 .group_container {
   background-color: #fff;
   border: 1px;
@@ -135,17 +142,14 @@ select,
   margin-top: 0;
 }
 
-/* .number_field {
-  width: 100%;
-} */
-
 .submit1 {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: #5fb523;
-  margin-top: 17rem;
-  margin-bottom: 0;
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 7px 5px;
 }
 
 .submit {
@@ -159,13 +163,29 @@ select,
 
 .submit_button {
   background-color: #5fb523;
-  padding: 1rem;
-  font-size: 15px;
-  border: 0.2px solid #fff;
+  padding: 2px;
   color: #fff;
-  border-radius: 4px;
+  border: none;
   width: 90%;
+  font-size: 120%;
+  cursor: pointer;
+}
+
+.shared {
+  text-align: center;
   margin: 1rem 0;
+  font-size: 120%;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 7px 5px;
+}
+
+.shared a {
+  text-decoration: none;
+  color: #5fb523;
+  text-transform: uppercase;
 }
 
 /* PURCHASES */
