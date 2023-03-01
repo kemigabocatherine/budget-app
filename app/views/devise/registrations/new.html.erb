@@ -1,32 +1,37 @@
-<nav class="nav"><h2 class="heading">Sign up</h2></nav>
+<nav class="nav"><h2 class="heading">SIGN UP</h2></nav>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="signup">
+    <div class="field">
+      <%= f.text_field :name,
+      class: "text_input2", autofocus: true,
+      placeholder: "Name"  %>
+    </div>
 
-  <div class="field">
-    <%= f.text_field :name,
-    class: "text_input2",
-    placeholder: "Name"  %>
-  </div>
+    <div class="field">
+      <%= f.email_field :email, 
+      class: "text_input1",
+      placeholder: "Email" , required: true, autocomplete: "email" %>
+    </div>
 
-  <div class="field">
-    <%= f.email_field :email, 
-    class: "text_input1",
-    placeholder: "Email" , required: true, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password, class: "text_input1",
+      placeholder: "Password", autocomplete: "new-password" %>
+    </div>
 
-  <div class="field">
-    <%= f.password_field :password, class: "text_input1",
-    placeholder: "Password", autocomplete: "new-password" %>
-  </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, class: "text_input1", placeholder: "Password confirmation", autocomplete: "new-password" %>
+    </div>
 
-  <div class="field">
-    <%= f.password_field :password_confirmation, class: "text_input1", placeholder: "Password confirmation", autocomplete: "new-password" %>
-  </div>
+    <div class="submit1">
+      <%= f.submit "SIGN UP", data: { turbo: false}, class: "submit_button" %>
+    </div>
 
-  <div class="submit1">
-    <%= f.submit "Sign up", data: { turbo: false}, class: "submit_button" %>
+    <div class="shared">
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
+  
 <% end %>
 
-<%= render "devise/shared/links"%>
