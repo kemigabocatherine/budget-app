@@ -49,10 +49,37 @@ body {
   color: #fff;
 }
 
-.signup {
+.signup, .login {
   display: flex;
   flex-direction: column;
   margin: 4% 10% 0 10%;
+}
+
+.remember {
+  display: flex;
+  justify-content: left;
+  margin-top: 5px;;
+}
+
+.total {
+  color: #757780;
+  margin-left: 5px;
+}
+
+.login-links {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 120%;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 5px;
+  padding: 7px 5px;
+}
+
+.share a {
+  text-decoration: none;
+  color: #5fb523;
 }
 
 .group_container {
@@ -82,12 +109,6 @@ body {
   color: #848790;
   text-align: center;
   padding-top: 1rem;
-}
-
-.total {
-  font-weight: 300;
-  font-size: 19px;
-  color: #383e45;
 }
 
 .add {
