@@ -47,6 +47,7 @@ body {
   font-weight: 200;
   font-size: 25px;
   color: #fff;
+  margin-right: auto;
 }
 
 .signup, .login {
@@ -80,6 +81,15 @@ body {
 .share a {
   text-decoration: none;
   color: #5fb523;
+}
+
+.backarrow {
+  display: flex;
+  justify-content: left;
+  color: #fff;
+  margin-right: auto;
+  font-size: 21px;
+  text-decoration: none;
 }
 
 .group_container {
