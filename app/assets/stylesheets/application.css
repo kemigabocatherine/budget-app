@@ -48,6 +48,7 @@ body {
   font-size: 25px;
   color: #fff;
   margin-right: auto;
+  text-transform: uppercase;
 }
 
 .signup, .login {
@@ -92,6 +93,15 @@ body {
   text-decoration: none;
 }
 
+.new {
+  bottom: 0;
+  position: absolute;
+}
+
+.out {
+  border: 1px solid #5fb523;
+}
+
 .group_container {
   background-color: #fff;
   border: 1px;
@@ -119,18 +129,6 @@ body {
   color: #848790;
   text-align: center;
   padding-top: 1rem;
-}
-
-.add {
-  background-color: #5fb523;
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 0;
-  margin-top: 70px;
-  height: 150%;
 }
 
 .new-link,
@@ -161,9 +159,10 @@ select,
   padding: 1rem;
   width: 100%;
   font-size: 15px;
-  border: 0.2px solid #bbbfca;
+  border: 0;
   background: #fff;
   margin-top: 1rem;
+  border-radius: 5px;
 }
 
 select,
@@ -171,6 +170,11 @@ select,
 .number_field {
   margin-top: 0;
 }
+
+.icons {
+  margin-top: 3px;
+}
+
 
 .submit1 {
   display: flex;
@@ -199,6 +203,8 @@ select,
   width: 90%;
   font-size: 120%;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
 .shared {

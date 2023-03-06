@@ -1,18 +1,21 @@
-  <nav class="nav">
-    <%= link_to groups_path, class: 'link' do %>
-      <span class="iconify" data-icon="eva:arrow-ios-back-fill" data-width="50" data-height="40" style="color: white; margin-left: -7rem;"></span>
-    <%end%>
-    <h1 class="heading"><%= @group.name %> Transactions</h1>
-  </nav>
-<div class="total_amount">
+<nav class="nav">
+  <%= link_to groups_path, :class => "backarrow" do %>
+    <i class="fa-solid fa-angles-left"></i>
+  <% end %>
+  <h1 class="heading"><%= @group.name %> Transactions</h1>
+</nav>
+<div class="login">
+  <div class="total_amount">
   <p class="name-tot">TOTAL AMOUNT:</p> <p class="amount">$<%= @total %></p>
-</div>
-<% @purchases.order(created_at: :desc).each do |purchase| %>
+  </div>
+  <% @purchases.order(created_at: :desc).each do |purchase| %>
   <div class="purchase_container">
     <p class="name-tot"><%= purchase.name %></p>
     <p class="amount">$ <%= purchase.amount %></p>
   </div>  
-<% end %>
-<div class="new-link3">
-  <%= link_to 'New transaction', new_group_purchase_path, class: 'purchase-link' %>
+  <% end %>
+  <div class="submit1">
+  <%= link_to 'NEW TRANSACTION', new_group_purchase_path, class: 'submit_button' %>
+  </div>
 </div>
+
