@@ -51,7 +51,8 @@ body {
   text-transform: uppercase;
 }
 
-.signup, .login {
+.signup,
+.login {
   display: flex;
   flex-direction: column;
   margin: 4% 10% 0 10%;
@@ -60,7 +61,7 @@ body {
 .remember {
   display: flex;
   justify-content: left;
-  margin-top: 5px;;
+  margin-top: 5px;
 }
 
 .total {
@@ -174,7 +175,6 @@ select,
 .icons {
   margin-top: 3px;
 }
-
 
 .submit1 {
   display: flex;
