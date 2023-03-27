@@ -1,4 +1,9 @@
-<nav class="nav"><h2 class="heading">LOG IN</h2></nav>
+<nav class="nav">
+  <%= link_to new_user_registration_path, :class => "backarrow" do %>
+    <i class="fa-solid fa-angles-left"></i>
+  <% end %>
+  <h2 class="heading">LOG IN</h2>
+</nav>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="login">

@@ -47,9 +47,12 @@ body {
   font-weight: 200;
   font-size: 25px;
   color: #fff;
+  margin-right: auto;
+  text-transform: uppercase;
 }
 
-.signup, .login {
+.signup,
+.login {
   display: flex;
   flex-direction: column;
   margin: 4% 10% 0 10%;
@@ -58,7 +61,7 @@ body {
 .remember {
   display: flex;
   justify-content: left;
-  margin-top: 5px;;
+  margin-top: 5px;
 }
 
 .total {
@@ -80,6 +83,24 @@ body {
 .share a {
   text-decoration: none;
   color: #5fb523;
+}
+
+.backarrow {
+  display: flex;
+  justify-content: left;
+  color: #fff;
+  margin-right: auto;
+  font-size: 21px;
+  text-decoration: none;
+}
+
+.new {
+  bottom: 0;
+  position: absolute;
+}
+
+.out {
+  border: 1px solid #5fb523;
 }
 
 .group_container {
@@ -111,18 +132,6 @@ body {
   padding-top: 1rem;
 }
 
-.add {
-  background-color: #5fb523;
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 0;
-  margin-top: 70px;
-  height: 150%;
-}
-
 .new-link,
 .new-link2 {
   text-decoration: none;
@@ -151,15 +160,20 @@ select,
   padding: 1rem;
   width: 100%;
   font-size: 15px;
-  border: 0.2px solid #bbbfca;
+  border: 0;
   background: #fff;
   margin-top: 1rem;
+  border-radius: 5px;
 }
 
 select,
 .select,
 .number_field {
   margin-top: 0;
+}
+
+.icons {
+  margin-top: 3px;
 }
 
 .submit1 {
@@ -189,6 +203,8 @@ select,
   width: 90%;
   font-size: 120%;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
 .shared {

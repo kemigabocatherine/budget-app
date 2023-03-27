@@ -1,30 +1,33 @@
 <nav class="nav">
-  <%= link_to group_purchases_path(params[:group_id], @group), class: 'link' do %>
-    <span class="iconify" data-icon="eva:arrow-ios-back-fill" data-width="50" data-height="40" style="color: white; margin-left: -12rem;"></span>
-  <%end%>
-  <h2 class="heading">Add a transaction</h2>
+  <%= link_to group_purchases_path, :class => "backarrow" do %>
+    <i class="fa-solid fa-angles-left"></i>
+  <% end %>
+  <h2 class="heading">ADD A TRANSACTION</h2>
 </nav>
-<%= form_with model: @purchase, url: "/groups/#{params[:group_id]}/purchases" , method: :post, class: "form" do |form| %>
-  <section class="form-section">
-    <%= form.text_field :name,
-    class: "text_input",
-    placeholder: "Transaction Name" %>
-  </section>
 
-  <section class="form-section">
-    <%= form.number_field :amount,
-    class: "number_field",
-    placeholder: "Add the amount..." %>
-  </section>
+<div class="login">
+  <%= form_with model: @purchase, url: "/groups/#{params[:group_id]}/purchases" , method: :post, class: "form" do |form| %>
+    <section class="form-section text-input1">
+      <%= form.text_field :name,
+      class: "text_input",
+      placeholder: "Transaction Name" %>
+    </section>
 
-  <div class="select">
-    <% @groups = Group.all %>
-     <%= form.select(:group_id, @groups.map { |group| [group.name, group_id: group.id] }, {:class => "group-select"}) %>
-  </div>
+    <section class="form-section text-input2 icons">
+      <%= form.number_field :amount,
+      class: "number_field",
+      placeholder: "Add the amount..." %>
+    </section>
 
-  <section class="form-section">
-    <div class="submit1">
-      <%= form.submit "Save", class: "submit_button" %>
+    <div class="select icons">
+      <% @groups = Group.all %>
+      <%= form.select(:group_id, @groups.map { |group| [group.name, group_id: group.id] }, {:class => "group-select"}) %>
     </div>
-  </section>
-<% end %>
+
+    <section class="form-section">
+      <div class="submit1">
+        <%= form.submit "Save", class: "submit_button" %>
+      </div>
+    </section>
+  <% end %>
+</div>
